@@ -16,5 +16,10 @@ describe Spellchecker do
       spellchecker = Spellchecker.new("water")
       expect(spellchecker.highlight).to eq "water"
     end
+
+    it 'within a sentence it returns an in-correctly spelt word wrapped in tildas' do
+      spellchecker = Spellchecker.new("I like wtaer")
+      expect(spellchecker.highlight).to eq "I like ~wtaer~"
+    end
   end
 end
