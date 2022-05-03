@@ -6,5 +6,12 @@ describe Spellchecker do
       spellchecker = Spellchecker.new("word")
       expect(spellchecker.highlight).to eq "word"
     end
+
+    it 'returns an in-correctly spelt word wrapped in tildas' do
+      spellchecker = Spellchecker.new("wrod")
+      expect(spellchecker.highlight).to eq "~wrod~"
+    end
+
+    
   end
 end
