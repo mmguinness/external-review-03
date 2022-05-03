@@ -29,4 +29,6 @@ INPUT | OUTPUT
 
 " " | " "
 
+"" | ""
+
 lowercase or uppercase

@@ -21,5 +21,11 @@ describe Spellchecker do
       spellchecker = Spellchecker.new("I like wtaer")
       expect(spellchecker.highlight).to eq "I like ~wtaer~"
     end
+
+    it 'returns an empty string unchanged' do
+      spellchecker = Spellchecker.new(" ")
+      expect(spellchecker.highlight).to eq " "
+    end
   end
+
 end

@@ -5,9 +5,12 @@ class Spellchecker
     @formatted_string = []
   end
 
-  def highlight
+  def format_string
     @string = @string.split(" ")
+  end
 
+  def highlight
+    format_string
     @string.each do |word|
       if @word_bank.include?(word)
         @formatted_string << word
@@ -15,9 +18,7 @@ class Spellchecker
         @formatted_string << "~" + word + "~"
       end
     end
-
     return @formatted_string.join(" ")
-
   end
 
 end
