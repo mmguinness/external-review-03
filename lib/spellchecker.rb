@@ -1,6 +1,6 @@
 class Spellchecker
   def initialize(string)
-    @word_bank = ["word"]
+    @word_bank = ["word", "water"]
     @string = string
   end
 
